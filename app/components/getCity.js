@@ -11,7 +11,7 @@ function Button(props){
   )
 }
 
-function GetCityDetails(props){
+function GetCity(props){
   return(
     <div>
       <input type="text" className="form-control" placeholder="Enter City" />
@@ -24,8 +24,8 @@ function GetCityDetails(props){
   )
 }
 
-GetCityDetails.propTypes = {
+GetCity.propTypes = {
   onSubmitCityName: PropTypes.func.isRequired
 }
 
-module.exports = GetCityDetails;
+module.exports = GetCity;
