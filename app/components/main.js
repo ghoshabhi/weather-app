@@ -1,12 +1,14 @@
 var React = require('react');
-var ReactDOM  = require('react-dom');
 
-var HelloWorld = React.createClass({
+var Main = React.createClass({
   render: function(){
-    return (
-      <div>Welcome to the Main Handler</div>
+    return(
+      <div>
+        <h1>MainJS Header</h1>
+        {this.props.children}
+      </div>
     )
   }
 });
 
-module.exports = HelloWorld;
+module.exports = Main;

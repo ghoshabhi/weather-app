@@ -5,9 +5,14 @@ var Route = ReactRouter.Route;
 var hashHistory = ReactRouter.hashHistory;
 var IndexRoute = ReactRouter.IndexRoute;
 var Main = require('../components/main');
+var Home = require('../components/home');
 
-var Routes = (
+var routes = (
   <Router history={hashHistory}>
-    <Route path='/' component={Main} />
+    <Route path='/' component={Main}>
+      <IndexRoute component={Home} />
+    </Route>
   </Router>
-)
+);
+
+module.exports = routes;
