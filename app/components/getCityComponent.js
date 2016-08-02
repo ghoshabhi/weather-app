@@ -6,12 +6,13 @@ function GetCityComponent(props){
     <div>
       <input type="text"
              className="form-control"
-             placeholder="Vadodara, Gujarat"/>
+             placeholder="Vadodara, Gujarat"
+             onChange = {props.onUpdateCityName}/>
       <br/>
       <button type="button"
               style={{margin: 10}}
               className='btn btn-lg btn-success'
-              onSubmit={props.onSubmitCityName}>
+              onClick={props.onSubmitCityName}>
         Submit City
       </button>
     </div>
@@ -19,7 +20,9 @@ function GetCityComponent(props){
 }
 
 GetCityComponent.propTypes = {
-  onSubmitCityName: PropTypes.func.isRequired
+  onUpdateCityName: PropTypes.func.isRequired,
+  onSubmitCityName: PropTypes.func.isRequired,
+  city: PropTypes.string.isRequired
 }
 
 module.exports = GetCityComponent;
